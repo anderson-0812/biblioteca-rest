@@ -12,7 +12,7 @@ Es un api rest basado en el registro de prestamos y devoluciones de recursos bib
  
                               Instalacion de nvm nodeJS y Mongodb
                               Copiar cada comando en el terminal en orden 
-                              a excepcion de los que se tenga co
+                              a excepcion de los que se tenga comando informativo no ejecutar 
 1.-  sudo apt install curl 
 
 2.-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash 
