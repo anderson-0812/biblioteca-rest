@@ -1,4 +1,3 @@
-import { url } from "inspector";
 
 // Definimos configuracion de bases de datos, entornos de desarrollo (devep or production),
 // tokens y puertos
@@ -22,7 +21,7 @@ if(process.env.ENV == 'dev'){
     urlDB = process.env.MONGO_URI
 }
 
-process.env.URLB = urlDB
+process.env.URLDB = urlDB
 
 // le digo que en caso de que tengamos puerto en heroku coja ese o si no 3500
 process.env.PORT = process.env.PORT || 3000;
