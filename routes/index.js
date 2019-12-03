@@ -8,5 +8,6 @@ console.log('\nTenemos armada nuestra estructura base\n');
 app.use(require('./user'));
 app.use(require('./role'));
 app.use(require('./petitioner'));
+app.use(require('./libraryResource'));
 
 module.exports = app;
