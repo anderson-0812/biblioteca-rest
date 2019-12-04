@@ -93,7 +93,7 @@ app.put('/petitioner/:id', (req, res) => {
 
 app.delete('/petitioner/:id', (req, res) => {
     let id = req.params.id;
-    
+
     let petitionerState = {
         state:false
     }
