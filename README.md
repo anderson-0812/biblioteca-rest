@@ -58,7 +58,7 @@ nvm uninstall <VERSIÓN> (Comando informativo no ejecutar)
                                
 1.- Mongodb 
 
-supo apt install mongodb 
+sudo apt install mongodb 
     Verificar que este funcionando bien  
 
      mongo --eval 'db.runCommand({ connectionStatus: 1 })' 
