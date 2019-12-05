@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const User = require('../models/user')
 
+const bcrypt = require('bcrypt') // encriptar la contraseña
+
+
 app.get('/user',(req, res) => {
     User.find({'state': true}).exec((err, userDB)=>{
         if(err){
@@ -25,7 +28,8 @@ app.post('/user',(req, res) => {
         name: body.name,
         lastname: body.lastname,
         mail: body.mail,
-        password: body.password,
+        // password: body.password,
+        password: bcrypt.hashSync(body.password,10), // estoy encriptando 10 veces al pass
         role: body.role
 
     });
@@ -59,7 +63,8 @@ app.put('/user/:id', (req, res) => {
         name: body.name,
         lastname: body.name,
         mail: body.mail,
-        password: body.password,
+        // password: body.password,
+        password: bcrypt.hashSync(body.password,10), // estoy encriptando 10 veces al pass
         role: body.role
     }
 

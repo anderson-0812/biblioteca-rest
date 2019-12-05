@@ -9,7 +9,7 @@
 
 let urlDB;
 
-// process es un obj global q ayuda alcontrol de proceso actual de node 
+// process es un obj global q ayuda al control de proceso actual de node
 process.env.ENV = 'dev'
 
 if(process.env.ENV == 'dev'){
@@ -28,5 +28,5 @@ process.env.PORT = process.env.PORT || 3000;
 console.log(`Puerto ${process.env.PORT}`)
 
 // Configuro mi Token
-process.env.SEED = process.env.SEED || "jwtsecretdev" // damos un nombre para la palabra firma
-process.env.CADUCIDAD = process.env.CADUCIDAD || "1d" // definimos el tiempo de expiracion
+process.env.SEED = process.env.SEED || "jwtsecretdev" // damos un nombre para la palabra firma o clave secreta q necesita jwt
+process.env.CADUCIDAD = process.env.CADUCIDAD || "30s" // 1d definimos el tiempo de expiracion
