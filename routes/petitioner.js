@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
 const Petitioner = require('../models/petitioner');
+const verificartoken = require('../middleware/auth');
 
-app.get('/petitioner', (req, res) => {
+
+app.get('/petitioner',verificartoken, (req, res) => {
     Petitioner.find({'state': true}).exec((err, petitionerDB)=> {
         if(err){
             return res.status(500).json({
@@ -23,7 +25,7 @@ app.get('/petitioner', (req, res) => {
     });
 });
 
-app.post('/petitioner', (req, res) => {
+app.post('/petitioner',verificartoken, (req, res) => {
     let body = req.body;
 
     let petitionerToSave = new Petitioner({
@@ -55,7 +57,7 @@ app.post('/petitioner', (req, res) => {
     });
 });
 
-app.put('/petitioner/:id', (req, res) => {
+app.put('/petitioner/:id',verificartoken, (req, res) => {
     let id = req.params.id;
     let body = req.body;
 
@@ -91,7 +93,7 @@ app.put('/petitioner/:id', (req, res) => {
     });
 });
 
-app.delete('/petitioner/:id', (req, res) => {
+app.delete('/petitioner/:id',verificartoken, (req, res) => {
     let id = req.params.id;
 
     let petitionerState = {

@@ -2,8 +2,9 @@ const express = require('express');
 const app = express();
 const Role = require('../models/role');
 
+const verificartoken = require('../middleware/auth');
 
-app.get('/role',(req, res)=>{
+app.get('/role',verificartoken,(req, res)=>{
 
     Role.find({'state': true}).exec((err,roleDB)=> {
         if(err){
@@ -20,7 +21,7 @@ app.get('/role',(req, res)=>{
 
 });
 
-app.post('/role',(req, res)=>{
+app.post('/role',verificartoken,(req, res)=>{
     let body = req.body;
 
     let roleToSave = new Role({
@@ -49,7 +50,7 @@ app.post('/role',(req, res)=>{
     });
 });
 
-app.put('/role/:id',(req,res) => {
+app.put('/role/:id',verificartoken,(req,res) => {
     let id = req.params.id;
 
     let body = req.body;
@@ -82,7 +83,7 @@ app.put('/role/:id',(req,res) => {
     });
 });
 
-app.delete('/role/:id',(req,res)=>{
+app.delete('/role/:id',verificartoken,(req,res)=>{
     let id = req.params.id;
 
     let roleState = {

@@ -3,9 +3,10 @@ const app = express();
 const User = require('../models/user')
 
 const bcrypt = require('bcrypt') // encriptar la contraseña
+const verificartoken = require('../middleware/auth'); // importamos herramienta de verificacion
 
 
-app.get('/user',(req, res) => {
+app.get('/user',verificartoken,(req, res) => {
     User.find({'state': true}).exec((err, userDB)=>{
         if(err){
             return res.status(500).json({
@@ -20,7 +21,7 @@ app.get('/user',(req, res) => {
     });
 });
 
-app.post('/user',(req, res) => {
+app.post('/user',verificartoken,(req, res) => {
     let body = req.body;
 
     let userToSave = new User({
@@ -54,7 +55,7 @@ app.post('/user',(req, res) => {
     });
 });
 
-app.put('/user/:id', (req, res) => {
+app.put('/user/:id',verificartoken, (req, res) => {
     let id = req.params.id;
     let body = req.body;
 
@@ -92,7 +93,7 @@ app.put('/user/:id', (req, res) => {
     });
 });
 
-app.delete('/user/:id', (req, res) => {
+app.delete('/user/:id',verificartoken, (req, res) => {
     let id  = req.params.id;
 
     let userState = {

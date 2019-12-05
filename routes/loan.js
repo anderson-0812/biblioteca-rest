@@ -3,8 +3,10 @@ const app = express();
 const Loan = require('../models/loan')
 // para uso de fechas
 // const dateFormat = require('dateformat')
+const verificartoken = require('../middleware/auth');
 
-app.get('/loan', (req, res) => {
+
+app.get('/loan',verificartoken, (req, res) => {
     // populate hace joins con las entidades populate('nameCampo')
     Loan.find({'state': true})
     .populate({path: 'user'
@@ -42,7 +44,7 @@ app.get('/loan', (req, res) => {
     });
 });
 
-app.post('/loan', (req, res) => {
+app.post('/loan',verificartoken, (req, res) => {
     let body = req.body;
 
     let loanToSave = new Loan({
@@ -74,7 +76,7 @@ app.post('/loan', (req, res) => {
     });
 });
 
-app.put('/loan/:id', (req, res) => {
+app.put('/loan/:id',verificartoken, (req, res) => {
     let id = req.params.id;
     let body = req.body;
 
@@ -110,7 +112,7 @@ app.put('/loan/:id', (req, res) => {
     });
 });
 
-app.delete('/loan/:id', (req, res) => {
+app.delete('/loan/:id',verificartoken, (req, res) => {
     let id = req.params.id;
 
     LoanState= {

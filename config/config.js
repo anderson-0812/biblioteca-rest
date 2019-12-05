@@ -29,4 +29,5 @@ console.log(`Puerto ${process.env.PORT}`)
 
 // Configuro mi Token
 process.env.SEED = process.env.SEED || "jwtsecretdev" // damos un nombre para la palabra firma o clave secreta q necesita jwt
-process.env.CADUCIDAD = process.env.CADUCIDAD || "30s" // 1d definimos el tiempo de expiracion
+// formato de tiempos limite https://github.com/zeit/ms
+process.env.CADUCIDAD = process.env.CADUCIDAD || "5m" // 1d definimos el tiempo de expiracion

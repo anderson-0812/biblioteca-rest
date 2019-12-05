@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const LibraryResource = require('../models/libraryResource');
 
-app.get('/libraryResource', (req, res) => {
+const verificartoken = require('../middleware/auth');
+
+app.get('/libraryResource',verificartoken, (req, res) => {
     LibraryResource.find({'state': true}).exec((err, libraryResourceDB) => {
         if(err){
             return res.status(500).json({
@@ -23,7 +25,7 @@ app.get('/libraryResource', (req, res) => {
     });
 });
 
-app.post('/libraryResource', (req, res) => {
+app.post('/libraryResource',verificartoken, (req, res) => {
     let body = req.body;
 
     let libraryResourceToSave = new LibraryResource({
@@ -54,7 +56,7 @@ app.post('/libraryResource', (req, res) => {
     });
 });
 
-app.put('/libraryResource/:id', (req, res) => {
+app.put('/libraryResource/:id',verificartoken, (req, res) => {
     let id = req.params.id;
     let body = req.body;
 
@@ -89,7 +91,7 @@ app.put('/libraryResource/:id', (req, res) => {
     });
 });
 
-app.delete('/libraryResource/:id', (req, res) => {
+app.delete('/libraryResource/:id',verificartoken, (req, res) => {
     let id = req.params.id;
     let body = req.body;
 
