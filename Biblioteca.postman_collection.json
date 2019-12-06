@@ -1,0 +1,1000 @@
+{
+	"info": {
+		"_postman_id": "f81bca8a-601a-423c-a963-e54b13d093a0",
+		"name": "Biblioteca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "localhost:3000/role",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Admin 2",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "administrador de todo 2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/role",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/role",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InN0YXRlIjp0cnVlLCJfaWQiOiI1ZGU4NDgxYTNhZTQ3OTFjMjBlMjViNTgiLCJjaSI6IjExMDQxODc3NTAiLCJuYW1lIjoiQW5kZXIgRWR1YXJkbyIsImxhc3RuYW1lIjoiamltZW5leiIsIm1haWwiOiJtdXJkb2dAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkSXNKaEhrVXFmNWIwWG5SRkJLTmswLm9kRVVvSHBpZHNsckU3YWcxTVAwRm12RFJia2JYMGkiLCJyb2xlIjoiNWRlMzJlNzNhNmQyNDIxZjc2MmU5YmZiIiwiX192IjowfSwiaWF0IjoxNTc1NTE0MTYxLCJleHAiOjE1NzU1MTQ0NjF9.k0H6An0pjAlV6FdjN5D7JLk7tVoeEKPvAWNlj8YyRTc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/role",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/role/5de4298bb862106b0fef567d",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Admin 2 EDIT edit",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "VWKSDMFKSD",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/role/5de4298bb862106b0fef567d",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role",
+								"5de4298bb862106b0fef567d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/role/5de4298bb862106b0fef567d",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/role/5de4298bb862106b0fef567d",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"role",
+								"5de4298bb862106b0fef567d"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "localhost:3000/user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InN0YXRlIjp0cnVlLCJfaWQiOiI1ZGU4NDgxYTNhZTQ3OTFjMjBlMjViNTgiLCJjaSI6IjExMDQxODc3NTAiLCJuYW1lIjoiQW5kZXIgRWR1YXJkbyIsImxhc3RuYW1lIjoiamltZW5leiIsIm1haWwiOiJtdXJkb2dAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkSXNKaEhrVXFmNWIwWG5SRkJLTmswLm9kRVVvSHBpZHNsckU3YWcxTVAwRm12RFJia2JYMGkiLCJyb2xlIjoiNWRlMzJlNzNhNmQyNDIxZjc2MmU5YmZiIiwiX192IjowfSwiaWF0IjoxNTc1NTEzNjI0LCJleHAiOjE1NzU1MTM2ODR9.JwmC1oSPr4soAMOUEo-zkGqGxFn4ML68e28R2qU6VbQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ci",
+									"value": "1104187750",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Ander 3",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "jimenez",
+									"type": "text"
+								},
+								{
+									"key": "mail",
+									"value": "anderEdu@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "5de32e73a6d2421f762e9bfb",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ci",
+									"value": "1104187750",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Ander 3 Edit",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "jimenez edit",
+									"type": "text"
+								},
+								{
+									"key": "mail",
+									"value": "ander@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "5de32e73a6d2421f762e9bfb",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/user/5de448de8d5b1f031136aad3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"5de448de8d5b1f031136aad3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/user/5de448de8d5b1f031136aad3",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/user/5de448de8d5b1f031136aad3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"5de448de8d5b1f031136aad3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ci",
+									"value": "1104187750",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Ander Eduardo",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "jimenez",
+									"type": "text"
+								},
+								{
+									"key": "mail",
+									"value": "murdog@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "4321",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "5de32e73a6d2421f762e9bfb",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Petitioner",
+			"item": [
+				{
+					"name": "localhost:3000/petitioner",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InN0YXRlIjp0cnVlLCJfaWQiOiI1ZGU4NDgxYTNhZTQ3OTFjMjBlMjViNTgiLCJjaSI6IjExMDQxODc3NTAiLCJuYW1lIjoiQW5kZXIgRWR1YXJkbyIsImxhc3RuYW1lIjoiamltZW5leiIsIm1haWwiOiJtdXJkb2dAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkSXNKaEhrVXFmNWIwWG5SRkJLTmswLm9kRVVvSHBpZHNsckU3YWcxTVAwRm12RFJia2JYMGkiLCJyb2xlIjoiNWRlMzJlNzNhNmQyNDIxZjc2MmU5YmZiIiwiX192IjowfSwiaWF0IjoxNTc1NTE0MTYxLCJleHAiOjE1NzU1MTQ0NjF9.k0H6An0pjAlV6FdjN5D7JLk7tVoeEKPvAWNlj8YyRTc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/petitioner",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"petitioner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/petitioner",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ci",
+									"value": "1104187768",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Jennifer 2",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "Jimenez",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "loja",
+									"type": "text"
+								},
+								{
+									"key": "telephone",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "mail",
+									"value": "jenny@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/petitioner",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"petitioner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/petitioner",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ci",
+									"value": "1104187768",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Jennifer 2 edit",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "Jimenez",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "loja",
+									"type": "text"
+								},
+								{
+									"key": "telephone",
+									"value": "3132132",
+									"type": "text"
+								},
+								{
+									"key": "mail",
+									"value": "jenny@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/petitioner/5de4a018acd19140ed3c477c",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"petitioner",
+								"5de4a018acd19140ed3c477c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/petitioner",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ci",
+									"value": "1104187768",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "Jennifer 2 edit",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "lastname",
+									"value": "Jimenez",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "loja",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "telephone",
+									"value": "3132132",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "mail",
+									"value": "jenny@gmail.com",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/petitioner/5de4a018acd19140ed3c477c",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"petitioner",
+								"5de4a018acd19140ed3c477c"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "libraryResource",
+			"item": [
+				{
+					"name": "localhost:3000/libraryResource",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/libraryResource",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"libraryResource"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/libraryResource",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Javaschipt",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "programacion ",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Anderson Jimenez",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "15",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/libraryResource",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"libraryResource"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/libraryResource",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Javaschipt 3 edit",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "programacion edit",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Anderson Jimenez",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "15",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/libraryResource/5de5fcab44dce029289e7cfe",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"libraryResource",
+								"5de5fcab44dce029289e7cfe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/libraryResource",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Javaschipt 3 edit",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "programacion edit",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "author",
+									"value": "Anderson Jimenez",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "stock",
+									"value": "15",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/libraryResource/5de5fcab44dce029289e7cfe",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"libraryResource",
+								"5de5fcab44dce029289e7cfe"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Loan",
+			"item": [
+				{
+					"name": "localhost:3000/libraryResource",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InN0YXRlIjp0cnVlLCJfaWQiOiI1ZGU4NDgxYTNhZTQ3OTFjMjBlMjViNTgiLCJjaSI6IjExMDQxODc3NTAiLCJuYW1lIjoiQW5kZXIgRWR1YXJkbyIsImxhc3RuYW1lIjoiamltZW5leiIsIm1haWwiOiJtdXJkb2dAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkSXNKaEhrVXFmNWIwWG5SRkJLTmswLm9kRVVvSHBpZHNsckU3YWcxTVAwRm12RFJia2JYMGkiLCJyb2xlIjoiNWRlMzJlNzNhNmQyNDIxZjc2MmU5YmZiIiwiX192IjowfSwiaWF0IjoxNTc1NTE0MTYxLCJleHAiOjE1NzU1MTQ0NjF9.k0H6An0pjAlV6FdjN5D7JLk7tVoeEKPvAWNlj8YyRTc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/loan",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"loan"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InN0YXRlIjp0cnVlLCJfaWQiOiI1ZGU4NDgxYTNhZTQ3OTFjMjBlMjViNTgiLCJjaSI6IjExMDQxODc3NTAiLCJuYW1lIjoiQW5kZXIgRWR1YXJkbyIsImxhc3RuYW1lIjoiamltZW5leiIsIm1haWwiOiJtdXJkb2dAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkSXNKaEhrVXFmNWIwWG5SRkJLTmswLm9kRVVvSHBpZHNsckU3YWcxTVAwRm12RFJia2JYMGkiLCJyb2xlIjoiNWRlMzJlNzNhNmQyNDIxZjc2MmU5YmZiIiwiX192IjowfSwiaWF0IjoxNTc1NTE0MTYxLCJleHAiOjE1NzU1MTQ0NjF9.k0H6An0pjAlV6FdjN5D7JLk7tVoeEKPvAWNlj8YyRTc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/loan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user",
+									"value": "5de448c68d5b1f031136aad1",
+									"type": "text"
+								},
+								{
+									"key": "petitioner",
+									"value": "5de49ff4acd19140ed3c477b",
+									"type": "text"
+								},
+								{
+									"key": "dateRegister",
+									"value": "01/12/2019",
+									"type": "text"
+								},
+								{
+									"key": "dateLimit",
+									"value": "14/12/2019",
+									"type": "text"
+								},
+								{
+									"key": "observations",
+									"value": "prueba",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/loan",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"loan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/loan",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/loan/5de7496dd09d4b35d722e7ef",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"loan",
+								"5de7496dd09d4b35d722e7ef"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/loan",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user",
+									"value": "5de448c68d5b1f031136aad1",
+									"type": "text"
+								},
+								{
+									"key": "petitioner",
+									"value": "5de49ff4acd19140ed3c477b",
+									"type": "text"
+								},
+								{
+									"key": "dateRegister",
+									"value": "01/12/2019",
+									"type": "text"
+								},
+								{
+									"key": "dateLimit",
+									"value": "14/12/2019",
+									"type": "text"
+								},
+								{
+									"key": "observations",
+									"value": "prueba Edit",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/loan/5de7496dd09d4b35d722e7ef",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"loan",
+								"5de7496dd09d4b35d722e7ef"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "localhost:3000/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "mail",
+									"value": "murdog@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "4321",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							],
+							"query": [
+								{
+									"key": "mail",
+									"value": "admin123@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "s3a",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
