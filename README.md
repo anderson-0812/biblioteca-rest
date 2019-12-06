@@ -85,12 +85,12 @@ npm i mongoose-unique-validator –save
  
  
  
+ ************************************************* SPORTE DE ERRORES ********************************************
  
  **Errores de de Nodemon**
  
  Error: nodemon command no encontrado
- 
  Solucion: 
-  npm uninstall nodemon
-  nodemon command no encontrado 
+  npm install nodemon -g --force 
+
                                 
