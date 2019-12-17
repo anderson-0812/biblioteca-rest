@@ -11,5 +11,6 @@ app.use(require('./role'));
 app.use(require('./petitioner'));
 app.use(require('./libraryResource'));
 app.use(require('./loan'));
+app.use(require('./loanDetail'));
 
 module.exports = app;
